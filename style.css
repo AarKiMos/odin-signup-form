@@ -48,16 +48,22 @@ h6 {
   src: url(./Fonts/Norse-Bold.otf);
 }
 
+:root {
+  --accent-amber: #fdac47;
+}
+
 /* ---------------------------------------------- */
 
 body {
+  font-family: sans-serif;
   display: flex;
   height: 100vh;
 }
 
 .hero {
-  width: 36vw;
+  width: 520px;
   position: relative;
+  flex: 0 0 auto;
 }
 
 .hero-image {
@@ -110,7 +116,120 @@ body {
   }
 }
 
-.form {
-  background-color: rgb(177, 234, 144);
-  flex-grow: 1;
+.main-content {
+  /* background-color: rgba(253, 172, 71, 0.15); */
+  background-color: #fff9f2;
+  height: 100vh;
+  overflow-y: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-heading {
+  font-size: 1.75rem;
+  font-family: sans-serif;
+  font-weight: 600;
+  color: black;
+  line-height: 120%;
+  margin: 30px 60px;
+}
+
+.form-heading p {
+  margin-bottom: 30px;
+}
+
+.form-content {
+  background-color: #fff;
+  padding: 30px 60px;
+
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.form-content p {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.form-main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form-field {
+  /* background-color: pink;
+  border: 1px solid black; */
+
+  width: 300px;
+  margin: 20px 0px;
+}
+
+.form-field {
+  label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #444;
+    line-height: 100%;
+    padding: 2px 0px;
+  }
+
+  input {
+    display: block;
+    border: 1px solid #e8e8ec;
+    border-radius: 4px;
+    font-size: 1rem;
+    width: 250px;
+    padding: 4px;
+    color: black;
+    font-weight: 500;
+  }
+
+  input:focus {
+    outline: none;
+    border: 2px solid var(--accent-amber);
+    box-shadow: 2px 2px 6px #f9c688;
+  }
+
+  input:invalid {
+    border: 2px solid rgb(198, 16, 16);
+  }
+}
+
+.form-footer {
+  margin: 30px 60px;
+}
+
+.submit-button {
+  background-color: var(--accent-amber);
+  font-size: 1.2rem;
+  padding: 12px 64px;
+
+  color: black;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+
+  margin-bottom: 30px;
+}
+
+.login-redirect {
+  font-size: 1.2rem;
+
+  a,
+  a:active,
+  a:visited,
+  a:focus {
+    color: var(--accent-amber);
+    text-decoration: none;
+    font-weight: 600;
+  }
+}
+
+.italic {
+  font-style: italic;
 }
